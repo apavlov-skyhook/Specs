@@ -14,7 +14,9 @@ Pod::Spec.new do |s|
     s.source           = { :git => "https://github.com/apavlov-skyhook/mparticle-apple-integration-skyhook.git", :tag => s.version.to_s }
 #    s.source           = { :git => "https://github.com/mparticle-integrations/mparticle-apple-integration-skyhook.git", :tag => s.version.to_s }
     s.social_media_url = "https://twitter.com/mparticles"
-
+    
+    s.frameworks = "CoreLocation", "MapKit", "Security", "SystemConfiguration", "AddressBook", "AddressBookUI"
+    s.libraries   = "sqlite3", "c++"
     s.ios.deployment_target = "8.0"
     s.ios.source_files      = 'mParticle-Skyhook/*.{h,m}', 'mParticle-Skyhook/skyhook-sdk/include/*.{h}'
     s.vendored_libraries = 'mParticle-Skyhook/skyhook-sdk/lib/*.{a}'
